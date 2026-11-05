@@ -1,0 +1,1 @@
+Upload all seven HTML files directly to the repository root and commit. CSS, fonts and supplied images are embedded in each page; no assets folder is required. Existing unused files can remain.
