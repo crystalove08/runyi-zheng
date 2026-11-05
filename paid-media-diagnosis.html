@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paid Media Performance Diagnosis — Runyi Zheng</title>
+<meta name="description" content="A 13-week Google Ads analysis of a drop in attributed purchases, using SQL and R.">
+<meta property="og:title" content="Paid Media Performance Diagnosis — Runyi Zheng">
+<meta property="og:description" content="A 13-week Google Ads analysis of a drop in attributed purchases, using SQL and R.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/fallback.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <a class="brand" href="index.html">Runyi Zheng</a>
+  <nav aria-label="Main"><ul>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#experience">Experience</a></li>
+    <li><a href="index.html#projects">Projects</a></li>
+    <li><a href="index.html#skills">Skills</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul></nav>
+</header>
+<main id="main">
+<div class="p-head">
+  <div class="wrap">
+    <p class="kicker">Paid Media &amp; Campaigns</p>
+    <h1>Paid Media Performance Diagnosis</h1>
+    <p class="p-sub">SQL · R · Marketing Analytics</p>
+    <div class="stats"><div class="stat"><span class="n">&minus;14%</span><span class="d">Ad clicks, week of Aug 10 vs prior week</span></div><div class="stat"><span class="n">&minus;20%</span><span class="d">Attributed purchases per click, same week</span></div><div class="stat"><span class="n">&minus;48%</span><span class="d">Click volume vs Aug 3 baseline, by Aug 24</span></div></div>
+  </div>
+</div>
+<div class="p-body">
+  <div class="wrap">
+    <section class="block"><h2>The question</h2><div class="wide"><p class="lead">I analyzed 13 complete weeks of Google Ads data to understand a drop in attributed purchases. Did the campaign get fewer clicks, fewer attributed purchases per click, or both?</p></div></section>
+    <section class="block"><h2>How I analyzed it</h2><div class="prose"><p><strong>SQL:</strong> I used CTEs to clean the weekly data, <code>NULLIF()</code> to handle zero denominators when calculating CPC and attributed purchases per click, and <code>LAG()</code> to flag weeks when spend rose but attributed purchases fell.</p><p><strong>R:</strong> I indexed each metric to its August 3 value and plotted both on matching scales to compare trends without showing raw counts.</p></div></section>
+    <section class="block"><h2>Chart</h2><div class="wide"><figure class="chart"><img src="assets/paid-media-chart.png" width="1800" height="1600" alt="Two line charts, both indexed to August 3 equals 100. Weekly ad clicks climb to 100 in the week of August 3, fall 14 percent in the week of August 10, and end near 52 on August 24. Attributed purchases per click fall 20 percent in the week of August 10, then return to about 101 by August 24."><figcaption>Each metric is indexed to the week of August 3 (100). The pink line marks the week of August 10.</figcaption></figure></div></section>
+    <section class="block"><h2>Findings &amp; business implications</h2><div class="prose"><p>In the week of August 10, ad clicks fell <strong>14%</strong> and attributed purchases per click fell <strong>20%</strong> compared with the prior week. By August 24, attributed purchases per click had returned to roughly its August 3 level, while click volume remained <strong>48% below</strong> that baseline.</p><p>I would next examine spend and CPC together, then compare device and geographic segments. This would help assess whether lower click volume reflected reduced spend, a shift toward more expensive traffic, or higher CPC within the same segments.</p></div></section>
+    <section class="block"><h2>Selected work</h2><div class="wide"><div class="gallery"><div class="shot land"><span>assets/paid-media-diagnosis/01.jpg</span><img data-base="assets/paid-media-diagnosis/01" data-exts="jpg,png,jpeg,webp" alt="Work sample"></div><div class="shot land"><span>assets/paid-media-diagnosis/02.jpg</span><img data-base="assets/paid-media-diagnosis/02" data-exts="jpg,png,jpeg,webp" alt="Work sample"></div><div class="shot land"><span>assets/paid-media-diagnosis/03.jpg</span><img data-base="assets/paid-media-diagnosis/03" data-exts="jpg,png,jpeg,webp" alt="Work sample"></div></div></div></section>
+  </div>
+</div>
+</main>
+<nav class="pager" aria-label="Projects"><div class="wrap"><a href="index.html#projects"><small>&larr; Back</small><span>All projects</span></a><a href="fall-collection-sale.html"><small>Next &rarr;</small><span>Fall Collection Sale</span></a></div></nav>
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Runyi Zheng</span>
+    <span><a href="mailto:zhengryapply@gmail.com">zhengryapply@gmail.com</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/runyi-zheng-bb19a9379" target="_blank" rel="noopener">LinkedIn</a></span>
+  </div>
+</footer>
+</body>
+</html>
